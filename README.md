@@ -15,17 +15,17 @@ The [tutorials](http://wiki.ros.org/ROS/Tutorials) are also very good, so check 
 
 The following assumes that you've created a catkin workspace in the default directory as in the [tutorial](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
 We'll have to first clone the package from github into the catkin workspace. 
-```sh
+```
 cd ~/catkin_ws/src
 git clone https://github.com/yujinrobot/kobuki.git
 ```
 Next, build the package(s):
 
-```bash
+```
 cd ~/catkin_ws
 catkin_make
 ```
 Now the package should have compiled. You can now look at the [kobuki tutorials](https://wiki.ros.org/kobuki/Tutorials) for what the robot can do. For example check out [this](https://wiki.ros.org/kobuki/Tutorials/Examine%20Kobuki) to listen in on some of the sensor nodes. Just remember to source your setup file before running any `.launch` files.
-```shell
+```
 source ~/catkin_ws/devel/setup.bash
 ```
