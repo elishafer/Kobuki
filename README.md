@@ -15,7 +15,7 @@ The [tutorials](http://wiki.ros.org/ROS/Tutorials) are also very good, so check 
 
 The following assumes that you've created a catkin workspace in the default directory as in the [tutorial](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
 We'll have to first clone the package from github into the catkin workspace. 
-```console
+```shell
 cd ~/catkin_ws/src
 git clone https://github.com/yujinrobot/kobuki.git
 ```
