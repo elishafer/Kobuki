@@ -19,3 +19,9 @@ We'll have to first clone the package from github into the catkin workspace.
 cd ~/catkin_ws/src
 git clone https://github.com/yujinrobot/kobuki.git
 ```
+Next, build the package(s):
+
+```console
+cd ~/catkin_ws
+catkin_make
+```
