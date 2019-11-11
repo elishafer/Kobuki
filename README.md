@@ -29,3 +29,16 @@ Now the package should have compiled. You can now look at the [kobuki tutorials]
 ```
 source ~/catkin_ws/devel/setup.bash
 ```
+
+## Installing rplidar
+
+On the Kobuki at our lab, we have an rplidar (version A1 or A2). So we need to install the rplidar package in the same way as before, namely cloning the git file:
+```
+cd ~/catkin_ws/src
+git clone https://github.com/Slamtec/rplidar_ros.git
+```
+After cloning we build the catkin:
+```
+cd ~/catkin_ws
+catkin_make
+```
