@@ -64,3 +64,5 @@ Now we can execute an example launch file:
 ```
 roslaunch rplidar_ros view_rplidar.launch
 ```
+
+For more info checkout the [ros wiki page](http://wiki.ros.org/rplidar)
