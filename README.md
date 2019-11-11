@@ -11,4 +11,11 @@ You'll first want to install ROS Melodic so follow the [instructions here](http:
 If you don't have a lot of experience with ROS check out the [start guide](http://wiki.ros.org/ROS/StartGuide) and follow the links there for an [intro](http://wiki.ros.org/ROS/Introduction) and the [concepts](http://wiki.ros.org/ROS/Concepts) of ROS.
 The [tutorials](http://wiki.ros.org/ROS/Tutorials) are also very good, so check them out.
 
-## 
+## Installing the Kobuki Package
+
+The following assumes that you've created a catkin workspace in the default directory as in the [tutorial](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
+We'll have to first clone the package from github into the catkin workspace. 
+```console
+cd ~/catkin_ws/src
+git clone https://github.com/yujinrobot/kobuki.git
+```
