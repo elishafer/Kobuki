@@ -23,7 +23,7 @@ Next, build the package(s):
 
 ```console
 cd ~/catkin_ws
-catkin_make
+jetson0@jetson-nano:~/catkin_ws$ catkin_make
 ```
 Now the package should have compiled. You can now look at the [kobuki tutorials](https://wiki.ros.org/kobuki/Tutorials) for what the robot can do. For example check out [this](https://wiki.ros.org/kobuki/Tutorials/Examine%20Kobuki) to listen in on some of the sensor nodes. Just remember to source your setup file before running any `.launch` files.
 ```console
