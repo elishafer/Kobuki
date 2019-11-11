@@ -42,3 +42,25 @@ After cloning we build the catkin:
 cd ~/catkin_ws
 catkin_make
 ```
+
+### Running rplidar
+After installing the lidar package, to run it we need to first set the read/write authorisations. First we check where it is connected. We run the following command:
+```
+ls -l /dev |grep ttyUSB
+```
+The output should be something like:
+```console
+jetson0@jetson-nano:~/catkin_ws$ ls -l /dev |grep ttyUSB
+lrwxrwxrwx  1 root    root           7 Nov  5 11:45 gps0 -> ttyUSB0
+lrwxrwxrwx  1 root    root           7 Nov  5 11:45 kobuki -> ttyUSB1
+crw-rw-rw-  1 root    dialout 188,   0 Nov  5 13:13 ttyUSB0
+crw-rw-rw-  1 root    dialout 188,   1 Nov  5 11:45 ttyUSB1
+```
+our lidar has the name of `gps0` so we need to change the `ttyUSB0` permissions:
+```
+sudo chmod a+rw /dev/ttyUSB0
+```
+Now we can execute an example launch file:
+```
+roslaunch rplidar_ros view_rplidar.launch
+```
