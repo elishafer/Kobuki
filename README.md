@@ -8,3 +8,7 @@ You'll first want to follow the [setup instructions](https://developer.nvidia.co
 ## Install ROS Melodic
 
 You'll first want to install ROS Melodic so follow the [instructions here](http://wiki.ros.org/melodic/Installation/Ubuntu).
+If you don't have a lot of experience with ROS check out the [start guide](http://wiki.ros.org/ROS/StartGuide) and follow the links there for an [intro](http://wiki.ros.org/ROS/Introduction) and the [concepts](http://wiki.ros.org/ROS/Concepts) of ROS.
+The [tutorials](http://wiki.ros.org/ROS/Tutorials) are also very good, so check them out.
+
+## 
