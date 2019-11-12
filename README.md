@@ -99,3 +99,8 @@ to:
     <param name="odom_frame" value="odom"/>
 ```
 
+You'll also want to change the rplidar launch to take the tf in consideration. In `/home/jetson0/catkin_ws/src/rplidar_ros/launch/rplidar.launch` add the following line before `</launch>`:
+```
+  <node pkg="tf" type="static_transform_publisher" name="base_frame_2_laser"
+   args="0 0 0.05 0 0 0 1 /base_link /laser 50" />
+```
