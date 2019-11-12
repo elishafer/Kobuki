@@ -66,3 +66,20 @@ roslaunch rplidar_ros view_rplidar.launch
 ```
 
 For more info checkout the [ros wiki page](http://wiki.ros.org/rplidar)
+
+## SLAM
+You can use [hector mapping](http://wiki.ros.org/hector_mapping).
+To install do the regular drill: 
+```
+cd ~/catkin_ws/src
+git clone https://github.com/tu-darmstadt-ros-pkg/hector_slam.git
+```
+I used the `catktin` branch. 
+```
+git checkout catkin
+```
+Otherwise if you want, you can use the `melodic-devel` branch:
+```
+git checkout melodic-devel
+```
+
