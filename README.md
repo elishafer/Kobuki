@@ -83,3 +83,19 @@ Otherwise if you want, you can use the `melodic-devel` branch:
 git checkout melodic-devel
 ```
 
+### Change tf names
+
+You'll need to change the tf names in the launch files so that they can work with each other.
+In hector slam the odom_frame is called nav, and the base_frame is base_stabilized. Change these names in any launch file that you'll want to use. for example in `/home/jetson0/catkin_ws/src/hector_slam/hector_mapping/launch/mapping_default.launch` you'll want to change:
+
+```
+    <param name="base_frame" value="base_stabilized" />
+    <param name="odom_frame" value="nav"/>
+```
+
+to:
+```
+    <param name="base_frame" value="base_footprint" />
+    <param name="odom_frame" value="odom"/>
+```
+
