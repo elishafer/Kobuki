@@ -44,7 +44,12 @@ catkin_make
 ```
 
 ### Running rplidar
-After installing the lidar package, to run it we need to first set the read/write authorisations. First we check where it is connected. We run the following command:
+After installing the lidar package, to run it we need to first set the read/write authorisations. First we check where it is connected. We run the following command:## TroubleShooting
+When you get problems with tf use the following command:
+
+    rosrun rqt_tf_tree rqt_tf_tree
+
+Checkout the [ros tf tutorial](http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf) for more info
 ```
 ls -l /dev |grep ttyUSB
 ```
@@ -118,9 +123,36 @@ Now you can open a new terminal and launch hectorslam:
 
     roslaunch hector_slam_launch tutorial.launch
 
+
+## Run From another PC on network
+You'll want the robot to be mobile and control/monitor it from afar. Thus you'll have to setup ROS on another pc on the same network as the robot. get a dedicated wifi router for that. For setup check [this](http://users.umiacs.umd.edu/~cteo/umd-erratic-ros-data/README-rvis-remote).
+Here's an excerpt from there:
+```
+*** ssh into remote computer ***
+1. ssh -X erratic@192.168.1.0
+
+At the remote terminal:
+2. export ROS_MASTER_URI=http://192.168.1.0:11311   //this ensures that we do not use localhost, but the real IP address as master node
+
+3. export ROS_IP=192.168.1.0 		//this ensures that ROS knows that we cannot use hostname directly (due to DHCP firewall issues)
+
+4. roscore
+
+At the local terminal:
+1. export ROS_MASTER_URI=http://192.168.1.0:11311   //tells local computer to look for the remote here
+
+2. export ROS_IP=192.168.1.1		//this ensures that ROS knows that we cannot use hostname directly (due to DHCP firewall issues)
+
+3. rosrun rviz rviz 			// fires up rviz on local computer. It will attach to the master node of the remote computer
+```
+Add the source commands to `~/.bashrc` or `~/.zshrc` depending on what you're using.
+
+
 ## TroubleShooting
 When you get problems with tf use the following command:
 
     rosrun rqt_tf_tree rqt_tf_tree
 
 Checkout the [ros tf tutorial](http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf) for more info
+
+
