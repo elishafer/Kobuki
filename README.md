@@ -146,6 +146,18 @@ At the local terminal:
 3. rosrun rviz rviz 			// fires up rviz on local computer. It will attach to the master node of the remote computer
 ```
 Add the source commands to `~/.bashrc` or `~/.zshrc` depending on what you're using.
+Also you'll have to change the `/etc/hosts` file. open the file in your favorite editor:
+
+    sudo gedit /etc/hosts
+    
+and add the following line:
+
+    <local ip>  <hostname>
+    
+change the variables to what you're using. if the remote ip is `192.168.0.200` and your hostname is `jetson-nano` then it'll be
+
+    192.168.0.200  jetson-nano
+
 for more checkout [here](https://husarion.com/tutorials/ros-tutorials/5-running-ros-on-multiple-machines/) and [here](https://github.com/ut-ims-robotics/tutorials/wiki/Running-ROS-over-multiple-computers)
 
 
