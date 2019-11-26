@@ -122,3 +122,5 @@ Now you can open a new terminal and launch hectorslam:
 When you get problems with tf use the following command:
 
     rosrun rqt_tf_tree rqt_tf_tree
+
+Checkout the [ros tf tutorial](http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf) for more info
