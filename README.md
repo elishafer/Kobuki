@@ -146,6 +146,7 @@ At the local terminal:
 3. rosrun rviz rviz 			// fires up rviz on local computer. It will attach to the master node of the remote computer
 ```
 Add the source commands to `~/.bashrc` or `~/.zshrc` depending on what you're using.
+for more checkout [here](https://husarion.com/tutorials/ros-tutorials/5-running-ros-on-multiple-machines/) and [here](https://github.com/ut-ims-robotics/tutorials/wiki/Running-ROS-over-multiple-computers)
 
 
 ## TroubleShooting
