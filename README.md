@@ -104,3 +104,21 @@ You'll also want to change the rplidar launch to take the tf in consideration. I
   <node pkg="tf" type="static_transform_publisher" name="base_frame_2_laser"
    args="0 0 0.05 0 0 0 1 /base_link /laser 50" />
 ```
+
+## Run Everything together
+First open a new terminal and launch kobuki node with tf:
+
+    roslaunch kobuki_node robot_with_tf.launch --screen
+    
+Next open a new terminal and launch the rplidar:
+
+    roslaunch rplidar_ros rplidar.launch
+    
+Now you can open a new terminal and launch hectorslam:
+
+    roslaunch hector_slam_launch tutorial.launch
+
+## TroubleShooting
+When you get problems with tf use the following command:
+
+    rosrun rqt_tf_tree rqt_tf_tree
