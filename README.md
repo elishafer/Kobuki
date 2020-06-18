@@ -44,12 +44,7 @@ catkin_make
 ```
 
 ### Running rplidar
-After installing the lidar package, to run it we need to first set the read/write authorisations. First we check where it is connected. We run the following command:## TroubleShooting
-When you get problems with tf use the following command:
-
-    rosrun rqt_tf_tree rqt_tf_tree
-
-Checkout the [ros tf tutorial](http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf) for more info
+After installing the lidar package, to run it we need to first set the read/write authorisations. First we check where it is connected. We run the following command:
 ```
 ls -l /dev |grep ttyUSB
 ```
